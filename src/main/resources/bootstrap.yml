@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: aws-s3-sample
+
+---
+spring:
+  profiles: default, local
+
+---
+spring:
+  profiles: localstack
+cloud:
+  aws:
+    s3:
+      endpoint: http://s3.localhost.localstack.cloud:4566/
+    stack:
+      auto: false
